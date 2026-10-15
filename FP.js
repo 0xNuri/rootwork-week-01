@@ -1,5 +1,5 @@
 const age = 21;
-const score = 50;
+const score = 90;
 const hasLaptop = true;
 const hasInternet = true;
 const completedApplication = true;
