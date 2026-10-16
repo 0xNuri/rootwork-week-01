@@ -3,10 +3,10 @@ const score = 90;
 const hasLaptop = true;
 const hasInternet = true;
 const completedApplication = true;
- if (age > 18 && score > 85 && hasLaptop && hasInternet && completedApplication){
+ if (age >= 18 && score >= 85 && hasLaptop && hasInternet && completedApplication){
     console.log ("Priority candidate")
  }
- else if (age > 18 && score > 60 && hasLaptop && hasInternet && completedApplication) {
+ else if (age >= 18 && score >= 60 && hasLaptop && hasInternet && completedApplication) {
     console.log ("eligible")
  }
  else {

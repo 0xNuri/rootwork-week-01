@@ -7,7 +7,7 @@
 - `hasInternet`: true if the applicant has stable internet access
 - `completedApplication`: true if the applicant finished the application
 
-### What each condition does
+### What each condition does.
 - The first `if` checks for a **priority** applicant: age above 18, score above 85, and a laptop, internet and a completed application.
 - The `else if` checks for an **eligible** applicant: the same requirements, but the score only needs to be above 60.
 - The `else` catches everyone who failed at least one requirement and prints "not eligible".

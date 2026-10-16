@@ -50,13 +50,13 @@ PRINT Not eligible
 
 ### Test 6
 - **Input:** age = 18, score = 90, hasLaptop = true, hasInternet = true, completedApplication = true
-- **Expected result:** Not eligible
-- **Actual result:** Not eligible
+- **Expected result:** eligible
+- **Actual result:** eligible
 
 ### Test 7
 - **Input:** age = 21, score = 60, hasLaptop = true, hasInternet = true, completedApplication = true
-- **Expected result:** Not eligible
-- **Actual result:** Not eligible
+- **Expected result:** eligible
+- **Actual result:** eligible
 
 ### Test 8
 - **Input:** age = 21, score = 90, hasLaptop = true, hasInternet = true, completedApplication = true
