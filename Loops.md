@@ -1,7 +1,7 @@
 # what each part of a for loop does
-the i = 0 gives the starting number
-## the i <> gives where it should stop or number of iterations
-### i += gives the amount or number each interation increases by
+## initialisation = the  values of the loop
+## condition = condition that needs to be met for the loop to function
+## update
 
 # why loops are useful
 ## allows for continous arithemetic processes
