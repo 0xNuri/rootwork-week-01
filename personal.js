@@ -1,6 +1,6 @@
 let nums = [12, 45, 7, 89, 23, 56];
 nums.push(123);
-nums.pop(2);
+nums.pop();
 nums.unshift (6473)
 nums.shift ()
 nums.splice (4, 1, 200)
