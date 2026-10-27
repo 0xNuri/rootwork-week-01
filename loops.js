@@ -1,4 +1,4 @@
-let names = ['james', 'mike', 'ego', 'ayo', 'nuri', 'nigga'];
+let names = ['james', 'mike', 'ego', 'ayo', 'nuri', 'mabel'];
 
 for(let i = 0; i < names.length; i++){
     console.log(names[i]);

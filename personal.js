@@ -14,7 +14,6 @@ console.log(nums);
 for (let i = 0; i < nums.length; i ++){
     if (nums[i] > largest){
       largest = nums[i]
-      console.log (nums[i] > largest)
     }
 }
   console.log(largest)
