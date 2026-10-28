@@ -35,8 +35,22 @@ let tasks = [
     completed: true,
     priority: "medium"
 }
+
 ]
 
+let done = 0
+let pending = 0
+
 for (let i = 0; i < tasks.length; i ++) {
+    if (tasks[i].completed === true) {
+        done ++
+    }
+     else {
+      pending ++
+    } 
+
     console.log(tasks[i])
+    console.log (`total number of tasks are ${tasks.length}`)
 }
+   console.log(`pending tasks are ${pending} `)
+    console.log(`completed tasks are ${done}`)
