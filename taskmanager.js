@@ -1,4 +1,4 @@
-let tasks = [
+const tasks = [
     {
     title: "Fix review feedback on the arrays task",
     category: "Rootwork",
@@ -49,7 +49,6 @@ function showStats(tasks) {
     else {
         pending ++ }
 
-   console.log (`task number ${i+1} is ${ tasks[i].completed ? "done" :"pending" }`)
      }
      console.log(`pending tasks are ${pending} `)
     console.log(`completed tasks are ${done}`)
@@ -66,12 +65,12 @@ function showStats(tasks) {
 
 
 
-function addTasks(tasks){
+function addTasks(tasks, title, category, completed, priority){
     tasks.push ({ 
-    title: "New meeting",
-    category: "Rootwork",
-    completed: false,
-    priority: "high"
+    title: title,
+    category: category,
+    completed: completed,
+    priority: priority,
 
     })
     console.log (tasks)
@@ -102,19 +101,19 @@ function isPriority(tasks){
     for (let i = 0; i < tasks.length; i ++) {
         
      if (tasks[i].priority === "high" && tasks[i].completed === false){
-         console.log(` ${tasks[i].title} task is pending`)
+         console.log(`${tasks[i].title} task is pending`)
         foundPriority ++
      }
     }
 
      if (foundPriority === 0){
-        console.log("no high priority task")
+        console.log("no high priority task is pending")
      }
 
 }
 
 displayTasks(tasks);  
 showStats(tasks);
-addTasks(tasks);
+addTasks(tasks, "Buy bread", "Everyday", false, "low");
 categoriseTask(tasks);
 isPriority(tasks)
