@@ -1,0 +1,3 @@
+## Without an array, you’d need multiple variables. With an array, it’s one variable holding the whole list in order, making everything easier
+## Array positions are numbers (0, 1, 2 ...), and a loop’s counter i counts through numbers too. So one short loop can handle every item, however long the array is.
+## the largest counter was incredibly confusing as i didn't really clarify the difference between i (the number) and num[i] the variable and it took me quite some time to get it
