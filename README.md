@@ -1,71 +1,27 @@
-# Task Management Program
+# Developer Profile Website
 
-## What the Program Does
+## What I built
+I built a developer profile page listing my skills and attributes as a developer, written to be honest and fully explained.
 
-My program is a simple task management application that uses an array stored in a constant as its main dataset. The array contains seven sample tasks generated with the assistance of AI.
+## Main sections of the website
+- About
+- Skills
+- Projects
+- Education
+- Experience
+- Contact
 
-The program performs different operations on the task array using five functions:
+## 3 semantic HTML choices I made and why
+1. `<header>`: used at the top of the page to hold the main heading and a short summary, so the page opens with a clear introduction.
+2. `<section>`: used to separate the different parts of the page, each with its own `id`, so the navigation links can jump straight to them.
+3. `<main>`: used to wrap the central content of the page, apart from the navigation and footer, so it's clear which part is the page's actual content.
 
-1. **showStats:** Counts and displays the number of pending and completed tasks.
-2. **displayTasks:** Displays the total number of tasks and lists each task in the order of its title, category, priority and completion status.
-3. **addTask:** Allows a new task to be added to the existing array using the `push()` method.
-4. **categorizeTask:** Counts the number of tasks in each category: Work, Personal and Everyday.
-5. **isPriority:** Checks the high-priority tasks and identifies whether they are pending or completed. It displays the relevant result based on their completion status.
+## One thing I found confusing or interesting
+The difference between `src` and `href`. Both can point to an image in the project folder, but `src` loads the image into the page, while `href` only links to it.
 
-Together, these functions allow the program to organise, display and analyse the tasks in the array.
+## AI disclosure
+I used AI (Claude) throughout this project to understand HTML concepts, to review my code, and to find mistakes. It explained what tags like `<main>`, `<header>`, `<footer>` and `<div>` are for, and how a `<label>` connects to an input through `for` and `id`. It reviewed my HTML several times and pointed out problems such as a leftover stylesheet link, a `<nav>` placed inside `<head>`, unclosed sections, form fields without labels, and the wrong input type for email.
 
-## How I Broke the Problem Down
+Some of the text on the page was drafted with AI from what I told it about my work: the short bio, the skills list and the project descriptions. I also adapted an example it gave me for the contact form. I wrote the page structure and the form, and made the corrections after each review, myself.
 
-I started by writing the main code for the task management program. Once I had the basic code working, I began breaking it down into smaller sections and converting those sections into separate functions.
-
-I identified five main operations that the program needed to perform: displaying statistics, displaying the tasks, adding new tasks, categorising tasks and checking high-priority tasks.
-
-I then created a separate function for each operation. This made it easier to organise the code and allowed each function to handle a specific responsibility.
-
-After creating the functions, I called them to execute the different operations on the original task array.
-
-## Concepts I Used
-
-The main JavaScript concepts I used throughout this project were:
-
-- **Arrays:** I used an array to store the seven sample tasks that the program works with.
-- **Constants (`const`):** I declared the task array using `const`.
-- **Functions:** I created five functions to separate the different operations performed by the program.
-- **For loops:** I used `for` loops to go through the array and examine individual tasks.
-- **If and else statements:** I used conditional statements to check task categories, completion statuses and priority levels.
-- **Counters:** I used counter variables to keep track of the number of pending tasks, completed tasks and tasks belonging to different categories.
-- **Array push():** I used the `push()` method to add new tasks to the existing array.
-
-These concepts formed the foundation of the program and allowed me to perform the required operations without using more advanced JavaScript features.
-
-## Hardest Part
-
-The hardest part of this project was breaking down my original code and converting it into separate functions.
-
-Initially, I struggled to understand how to identify the different sections of a written code block and determine how to turn them into individual functions. I was also not used to working with such a long block of code. Having to scroll up and down repeatedly to locate different sections made the process more challenging.
-
-I encountered several errors while reorganising the code. Some of these errors were related to variable scope, particularly when I moved variables and `console.log()` statements into or out of functions.
-
-For example, I encountered a `ReferenceError: pending is not defined` because the variables were declared inside a function but were being accessed outside its scope. Understanding where variables could be accessed and moving the relevant statements into the correct function helped me resolve the issue.
-
-This experience helped me understand functions, code organisation and variable scope better.
-
-## One Thing I Would Improve
-
-At this stage, I find it difficult to identify a specific improvement because I genuinely put my best effort into completing the project with the JavaScript knowledge I currently have.
-
-However, with more time and a better understanding of JavaScript, I would like to improve the overall structure of my code, explore more efficient ways of performing the different operations and learn additional JavaScript concepts that could make the program more flexible and maintainable.
-
-## AI Disclosure
-
-I used AI at different stages of this project, mainly to help me understand functions, objects and variable scope, break down the project instructions into smaller steps, and debug errors when my code was not working as expected.
-
-The seven sample tasks in my dataset were also generated with the assistance of AI.
-
-One suggestion I accepted was using the examples and patterns provided by AI to understand how functions, loops and counters could work together. I used these explanations as a guide when writing my own code.
-
-However, I did not simply rely on AI to write the entire program. I wrote the loops, counters and functions myself, adapting the patterns I had been shown. I also ran the program to test the output and verify that the different counts were correct.
-
-One instance where I had to work through a problem myself involved a variable scope error. Rather than simply following the suggested solution, I considered how I could reorganise the code and decided to create a separate function to handle the operation. I then tested my changes to make sure the error was resolved.
-
-Overall, AI served as a learning and debugging tool throughout the project, but I was responsible for writing, adapting, testing and correcting the program.
+One suggestion I accepted was giving every form field its own label and changing the email field to `type="email"`.
