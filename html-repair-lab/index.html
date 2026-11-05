@@ -6,16 +6,22 @@
 </head>
 
 <body>
-    <h1>Tech Club</h1>
 
-<nav>
+<header>
+  <nav>
   <a href="#about">About</a>
   <a href="#events">Events</a>
   <a href="#join">Join</a>
 </nav>
 
-<h2 id="about">About Us</h2>
+   <h1>Tech Club</h1>
+
+</header>
+<main>
+  <section id="about">
+<h2>About Us</h2>
 <p>We are a student technology club learning how to build useful things on the web.</p>
+  </section>
 
 <section id="events">
   <h2>Upcoming Events</h2>
@@ -40,33 +46,38 @@
   </ul>
 </section>
 
-<img src="club.jpg" alt="image">
+<img src="club.jpg" alt="tech club logo ">
 
 
 <section id="join">
   <h2>Join the Club</h2>
 
   <form>
-   <label for="name">Name</label>
-    <input type="text" name="name" id="name">
-
+  <p><label for="name">Name</label>
+    <input type="text" name="name" id="name" required> 
+  </p>
+  <p>
     <label for="email">Email</label>
-    <input type="email" name="email" id="email">
-
-     <fieldset>
+    <input type="email" name="email" id="email" required>
+  </p>  
+  <fieldset>
        <legend> Why do you want to join?</legend>
+   <p>       
        <label for="message">Your Message</label>
        <br>
        <textarea name="message" id="message" cols="20" rows="15" placeholder="Type your message here"></textarea>
-    <br>
+  </p> 
+       <br>
     </fieldset>
 
     <button type="submit">Submit</button>
+    <button type="reset">Reset</button> 
   </form>
 </section>
+</main>
 
 <footer>
-  Tech Club 2026
+  &copy; Tech Club 2026
 </footer>
 
 </body>
