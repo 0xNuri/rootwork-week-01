@@ -6,5 +6,6 @@
  changed div id of "events" to section id
 fixed heading hierachy of list items
 changed type="text" into type="email"
-last div header changed to footer
+last div container changed to footer
 added legend and text area to allow for longer text to be submitted
+added character encoding
