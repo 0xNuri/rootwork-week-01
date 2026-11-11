@@ -43,15 +43,17 @@ body {
 .d1 {background-color: var(--d1); 
    border-color: rgb(106, 69, 0);
     border-style: solid;
+      border: 1px;
     border-radius: 0.5rem; padding: 2rem;}
 .d2 {background-color: var(--d2); 
    border-color: rgb(106, 69, 0);
     border-style: solid;
+    border: 1px;
     border-radius: 0.5rem; padding: 2rem; }
 .d3 {background-color: var(--d3); 
-
    border-color: rgb(106, 69, 0);
     border-style: solid;
+     border: 1px;
     border-radius: 0.5rem; padding: 2rem;}
 
         .container {
@@ -90,3 +92,15 @@ textarea:focus-visible,
 input:focus-visible {
   outline: 3px solid (var(--outline))
 }
+input,
+textarea{
+    color: aliceblue;
+    background-color: rgba(128, 128, 128, 0.363);
+    border: 1px solid var(--accent)
+    padding: var(--main-spacing);
+    border-radius: 0.5rem;
+    box-sizing: border-box: ;
+    width: 100%;
+    resize: vertical;
+}
+
