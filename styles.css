@@ -5,9 +5,18 @@
     --d2: lightsalmon;
     --d3: paleturquoise;
     --accent: goldenrod;
-    --accent-2:black;
+    --accent-2:white;
+    --accent-3: grey;
     --colourtext: rgb(255, 255, 255);
-    --header: gold
+    --header: gold;
+    --main-spacing: 1rem;
+    --outline:orange
+
+}
+main{
+    max-width: 60rem;
+  margin:0 auto;
+  padding: var(--main-spacing);
 }
 nav a {
     color: var(--colourtext);
@@ -17,31 +26,33 @@ h2 {color: var(--accent);
 font-size: 2rem;
 font-family: 'Times New Roman', Times, serif
 }
-.blue-text{
-    color:blue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 h1{
-    color: var(--header)
+    color: var(--header);
+    font-family: 'Times New Roman', Times, serif;
 }
 h3 {
     color: var(--accent-2);
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
 }
-.thick-red-border{
-    border-color: red;
-    border-width: 8px;
-    border-style:solid;
-    border-radius: 50%
-}
 body {
     background-color: var(--background);
     color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.d1 {background-color: var(--d1); }
-.d2 {background-color: var(--d2);  }
-.d3 {background-color: var(--d3); }
+.d1 {background-color: var(--d1); 
+   border-color: rgb(106, 69, 0);
+    border-style: solid;
+    border-radius: 0.5rem; padding: 2rem;}
+.d2 {background-color: var(--d2); 
+   border-color: rgb(106, 69, 0);
+    border-style: solid;
+    border-radius: 0.5rem; padding: 2rem; }
+.d3 {background-color: var(--d3); 
+
+   border-color: rgb(106, 69, 0);
+    border-style: solid;
+    border-radius: 0.5rem; padding: 2rem;}
 
         .container {
     display: grid;
@@ -49,6 +60,8 @@ body {
 
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     grid-gap: 8px 15px;
+ 
+   
     justify-content: center;
     align-content: center;
 }
@@ -62,3 +75,18 @@ body {
     grid-gap: 8px 15px;}
 
     }
+    img {
+  max-width: 100%;
+  height: auto;
+}
+a:hover,
+nav a:hover,
+button:hover{
+    color: (var(--accent));
+}
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 3px solid (var(--outline))
+}
