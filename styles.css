@@ -1,0 +1,63 @@
+:root{
+    --background: black;
+    --text: aliceblue;
+    --d1: lightskyblue;
+    --d2: lightsalmon;
+    --d3: paleturquoise;
+    --accent: goldenrod;
+    --colourtext: rgb(255, 255, 255);
+    --header: gold
+}
+nav a {
+    color: var(--colourtext);
+}
+
+h2 {color: var(--accent);
+font-size: 40px;
+font-family: 'Times New Roman', Times, serif
+}
+.blue-text{
+    color:blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    color: var(--header)
+}
+h3 {
+    color: var(--accent);
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.thick-red-border{
+    border-color: red;
+    border-width: 8px;
+    border-style:solid;
+    border-radius: 50%
+}
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+.d1 {background-color: var(--d1); }
+.d2 {background-color: var(--d2);  }
+.d3 {background-color: var(--d3); }
+
+        .container {
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 8px 15px;
+    justify-content: center;
+    align-content: center;
+}
+ 
+    @media(max-width: 375px){
+        .container {
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 8px 15px;}
+
+    }
