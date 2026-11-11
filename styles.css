@@ -5,6 +5,7 @@
     --d2: lightsalmon;
     --d3: paleturquoise;
     --accent: goldenrod;
+    --accent-2:black;
     --colourtext: rgb(255, 255, 255);
     --header: gold
 }
@@ -13,7 +14,7 @@ nav a {
 }
 
 h2 {color: var(--accent);
-font-size: 40px;
+font-size: 2rem;
 font-family: 'Times New Roman', Times, serif
 }
 .blue-text{
@@ -24,8 +25,8 @@ h1{
     color: var(--header)
 }
 h3 {
-    color: var(--accent);
-    font-size: 30px;
+    color: var(--accent-2);
+    font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
 }
 .thick-red-border{
