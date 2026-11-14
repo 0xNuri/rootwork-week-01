@@ -173,55 +173,24 @@ nav{
     .flexbox-container{
         display: flex;
         flex-wrap: wrap;
+        gap:calc(var(--padding-spacing)/2);
         align-content: flex-start;
         justify-content: flex-start;
+        margin: 0;
+        padding: 0;
     }
-    .flexbox-item-1{
+    .flexbox-item-1,
+    .flexbox-item-2,
+    .flexbox-item-3,
+    .flexbox-item-4,
+    .flexbox-item-5,
+    .flexbox-item-6{
+        display: inline-block;
         width: auto;
         margin: 10px;
         border: 2px solid var(--accent-2);
         background-color: var(--background);
-       padding: 3px 5px;
+       padding: 0.5rem 1rem;
          border-radius: 0.5rem;
         }
-    .flexbox-item-2{
-    width: auto;
-        margin: 10px;
-        border: 2px solid var(--accent-2);
-        background-color: var(--background);
-       padding: 3px 5px;
-         border-radius: 0.5rem;
-    }
-    .flexbox-item-3{
-    width: auto;
-        margin: 10px;
-        border: 2px solid var(--accent-2);
-        background-color: var(--background);
-        padding: 3px 5px;
-         border-radius: 0.5rem;
-    }
-    .flexbox-item-4{
-    width: auto;
-        margin: 10px;
-        border: 2px solid var(--accent-2);
-        background-color: var(--background);
-        padding: 3px 5px;
-        border-radius: 0.5rem;
-    }
-    .flexbox-item-5{
-    width: auto;
-        margin: 10px;
-        border: 2px solid var(--accent-2);
-        background-color: var(--background);
-       padding: 3px 5px;
-        border-radius: 0.5rem;
-    }
-    .flexbox-item-6{
-    width: auto;
-        margin: 10px;
-        border: 2px solid var(--accent-2);
-        background-color: var(--background);
-        padding: 3px 5px;
-        border-radius: 0.5rem;
-    }
 }
