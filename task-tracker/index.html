@@ -6,74 +6,49 @@
         <meta charset="UTF-8">
         <meta name="author" content="oba nuri">
         <meta name="description" content="Developer profile for a Fullstack developer">
-        <link rel="icon" href="" type="image/png">
-        <link rel="stylesheet" href="styles.css">
-        <script defer src="scripts.js"></script>
+            <link rel="stylesheet" href="styles.css">
+        <script defer src="script.js"></script>
 </head>
     <body>
         <header>
              <h1 class="title"> Task Manager</h1>
         </header>
-        <main>
             <div class="all-tasks">
                 <h2 class="task-list-title">My tasks</h2>
-                <ul class="task-list">
-                    <li class="active-list">Urgent</li>
-                    <li>Priority</li>
-                    <li>Unimportant</li>
-                </ul>
-<form action="">                              
-            <label for="message">Input Task detail</label>
-            <input type="text" id="message" name="message" placeholder="alarm 8:00AM" class="new-list" aria-label="new-list">
-            <button type="submit" class="btn list" aria-label="add-new-list">+<button>
-            <p id="error message" class="error"></p>
-</form>
+                <section class="task-list">
+                 <div><button type="button" class="filter-btn active-filter" data-filter="all" >All</button></div>
+                    <div><button type="button" class="filter-btn" data-filter="active">Active</button></div>
+                    <div><button type="button" class="filter-btn" data-filter="completed"> Completed </button></div>
+                </section>
+
             </div>
             <div class="todo-list">
                 <div class="todo-header">
-                    <h2 class="classlist-title">Urgent</h2>
+                    <h2 class="classlist-title">Active</h2>
                     <p class="classtask-count">3 tasks remaining</p>
                 </div>
                 <div class="todo-body">
 
-                    <!--task 1-->
-                    <div class="tasks">
-                        <div class="tasks">
-                            <input type="checkbox" id="task-1">
-                            <label for="task-1"><span class="custom-checkbox">Revise rootwork assignment</span></label> 
-                        </div>
+                    <div class="tasks-container"></div>
 
-                        <!--task 2-->
-                    </div>
-                    <div class="tasks">
-                        <div class="tasks">
-                            <input type="checkbox" id="task-2">
-                            <label for="task-1"><span class="custom-checkbox">Get lunck</span></label> 
-                        </div>
-                    </div>
-                    
-                    <!--Task 3-->
-                    <div class="tasks">
-                        <div class="tasks">
-                            <input type="checkbox" id="task-3">
-                            <label for="task-1"><span class="custom-checkbox">Meeting</span></label> 
-                        </div>
-                    </div>
 
                     <!--Tasks creator-->
-                    <div class="new-task-creator">
-         <form action="">                              
-            <label for="message">Input Task detail</label>
-            <input type="text" id="message" name="message" placeholder="alarm 8:00AM" class="new-list" aria-label="new-list">
-            <button type="submit" class="btn list" aria-label="add-new-list">+<button>
-            <p id="error message" class="error"></p>
-        </form>
-                    </div>
+         <div class="new-task-creator">
+             <form action="" class="form" data-new-task-form>                              
+                <label for="message"></label>
+                <button type="submit" class="btn-create" aria-label="add-new-task">+</button>
+                <input data-new-task-input type="text" id="new-task-creator" placeholder="Add New Task" class="new-task" aria-label="new-task">
+                <p id="error message" class="error"></p>
+             </form>
+
+
+                </div>
                     <div class="delete-tasks"></div>
+                    <button class=" btn-delete">Clear completed tasks</button>
+                    <button class="btn-delete">Delete all</button>
                 
                 </div>
             </div>
-        </main>
     
 <footer>
 
