@@ -4,14 +4,11 @@ const taskList = document.querySelector('.task-list')
 const tasksContainer = document.querySelector('.tasks-container');
 const errorMessage = document.querySelector('.error')
 const taskDisplayContainer = document.querySelector('[data-list-display-container]')
-const taskTitleElement = document.querySelector('[data-list-title]')
 const taskCountElement = document.querySelector('[data-list-count]')
 const filterButtons = document.querySelectorAll('.filter-btn');
+const taskTitleElement = document.querySelector('.classlist-title');
 
-let tasks = [
-    { id: '1', name: 'Revise rootwork assignment', complete: false },
-    { id: '2', name: 'Get lunch', complete: true }
-];
+let tasks = [ ];
 
 let currentFilter = 'all';
 
@@ -43,6 +40,9 @@ taskForm.addEventListener('submit', e => {
 
     function render() {
     clearElement(tasksContainer);
+
+     if (taskTitleElement) {
+        taskTitleElement.textContent = currentFilter.toUpperCase();}
 
     let filteredTasks = tasks;
     if (currentFilter === 'active'){
@@ -130,4 +130,16 @@ filterButtons.forEach(button => {
         render();
     });
 });
+
+const clearCompletedBtn = document.getElementById ('clear-completed-btn');
+clearCompletedBtn.addEventListener('click', () => {
+    tasks = tasks.filter (tasks => !tasks.complete)
+    render()
+})
+
+const deleteAllBtn = document.getElementById ('delete-all-btn');
+deleteAllBtn.addEventListener('click', () => {
+    tasks = []
+    render ()
+}) 
 render ()
