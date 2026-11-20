@@ -34,8 +34,7 @@ Extends my Week 5 semantic HTML and Week 6 responsive CSS profile with JavaScrip
 ## Testing
 
 Checked at 375px, 768px and 1440px:
-
-- **375px:** worked well, except I did not know how to fix the nav menu toggle button and it covers a large part of the screen
+- **375px:** worked well, except I did fix the nav menu toggle button by moving the media to the bottom of the css file
 - **768px:** no issues
 - **1440px:** no issues
 
