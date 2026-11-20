@@ -16,9 +16,12 @@
 
     }
 body.light-theme {
-       --background: #f4f6f8;  
-    --text: #1a1a1a;         
-    --accent-2: #2d3748;     
+     --background: #f4f6f8;  
+     --text: #1a1a1a;         
+     --accent-2: #2d3748;     
+     --header: #8a6d00;
+     --accent: #9a6700;  
+     --accent-3: #4a5568; 
 }
 header,
 nav,
@@ -50,11 +53,10 @@ h3 {
     font-family: 'Times New Roman', Times, serif;
     }
 
-h4{
-    color: var(--background);
-    font-size: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
-    }
+.container h3 {
+  font-size: 1.5rem;
+  color: var(--card-text);
+}
 
 body {
     background-color: var(--background);
@@ -96,7 +98,7 @@ section {
 .success-message{
  color: var(--accent);
  font-weight: bold;
- margin-top: 1reme;
+ margin-top: 1rem;
 }
 .nav-toggle {
   display: none;
@@ -175,7 +177,7 @@ input:focus-visible {
 
 input,
 textarea{
-    color: aliceblue;
+    color: var(--text);
     background-color: rgba(128, 128, 128, 0.363);
     border: 1px solid var(--accent);
     padding: var(--main-spacing);
