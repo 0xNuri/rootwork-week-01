@@ -77,9 +77,9 @@ if (isValid){
 })}
 
 
- if (themetoggle){
-     const themeIcon = themetoggle.querySelector ('.theme-icon');
-themetoggle.addEventListener ('click', () => {
+ if (themeToggle){
+     const themeIcon = themeToggle.querySelector ('.theme-icon');
+themeToggle.addEventListener ('click', () => {
  const isLight = document.body.classList.toggle('light-theme');
  themeIcon.textContent = isLight ? '🌙' : '☀️';
  
