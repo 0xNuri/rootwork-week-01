@@ -1,84 +1,48 @@
-# Developer Profile Website
+## Interactive Developer Profile
 
-## What I built
-I built a developer profile page listing my skills and attributes as a developer, written to be honest and fully explained.
+Extends my Week 5 semantic HTML and Week 6 responsive CSS profile with JavaScript.
 
-## Main sections of the website
-- About
-- Skills
-- Projects
-- Education
-- Experience
-- Contact
+## What I added
 
-## 3 semantic HTML choices I made and why
-1. `<header>`: used at the top of the page to hold the main heading and a short summary, so the page opens with a clear introduction.
-2. `<section>`: used to separate the different parts of the page, each with its own `id`, so the navigation links can jump straight to them.
-3. `<main>`: used to wrap the central content of the page, apart from the navigation and footer, so it's clear which part is the page's actual content.
+- **Mobile navigation toggle:** a menu button that opens and closes the nav on small screens, with `aria-expanded`, `aria-controls` and an accessible label. It also closes with the Escape key.
+- **Contact form behaviour:** validation on name, email and message, with `trim()`, a specific error beside each invalid field, and screen-reader announcements.
+- **Demo success message:** says plainly that no email was sent.
+- **Enhancement:** dark and light mode toggle
 
-## One thing I found confusing or interesting
-The difference between `src` and `href`. Both can point to an image in the project folder, but `src` loads the image into the page, while `href` only links to it.
+## Week 7 Learning Check
 
-## AI disclosure
-I used AI (Claude) throughout this project to understand HTML concepts, to review my code, and to find mistakes. It explained what tags like `<main>`, `<header>`, `<footer>` and `<div>` are for, and how a `<label>` connects to an input through `for` and `id`. It reviewed my HTML several times and pointed out problems such as a leftover stylesheet link, a `<nav>` placed inside `<head>`, unclosed sections, form fields without labels, and the wrong input type for email.
+1. **DOM vs the HTML source:** HTML is the original code, while the DOM is how the browser organizes it for JavaScript to work with.
+2. **Event listener vs an inline handler:** An event listener is added in JavaScript, while an inline handler is written directly in HTML.
+3. **Why `preventDefault()` on the demo form:** It stops the page from reloading so JavaScript can handle the form.
+4. **How validation messages are shown:** They appear to tell users what they need to correct in the form.
+5. **What `aria-expanded` tells a user:** It tells screen readers whether a menu or section is open or closed.
+6. **What went wrong while debugging:**
 
-Some of the text on the page was drafted with AI from what I told it about my work: the short bio, the skills list and the project descriptions. I also adapted an example it gave me for the contact form. I wrote the page structure and the form, and made the corrections after each review, myself.
+   **The form reloaded the page even though I used `preventDefault()`**
 
-One suggestion I accepted was giving every form field its own label and changing the email field to `type="email"`.
+   - **What I saw:** I submitted the form and the page reloaded.
+   - **What I checked:** I opened the browser Console (F12) and read the first error message.
+   - **Cause:** Line 4 of my script used `querySelector('(data-new-list-form)')`, which is not a valid selector. That threw an error, and the script stopped running at that line. The submit listener further down the file was never attached, so `preventDefault()` never ran.
+   - **Fix:** I deleted the invalid selectors that I wasn't using, so the script ran all the way down and attached the listener.
 
-# Responsive Developer Profile
+## Implementation decisions
 
-## Week 6 Learning Check
+1.  used aria-expanded for the nav button menu, to allow html to know whether it was open or not
+2.  added a gradient in light and dark mode for added aesthetics and improved visibility
+3.  used only event listeners in js rather than inline to separate functions
 
-**When would you choose Flexbox instead of Grid?**
-I chose Flexbox to arranging items in one direction, ie. on a single line
+## Testing
 
-I used CSS Grid for my project cards because I wanted to arrange them in columns and rows.
+Checked at 375px, 768px and 1440px:
 
-**What does `box-sizing: border-box` change?**
-box-sizing: border-box makes the browser include an element's padding and border within its specified width and height instead of overflowing.
+- **375px:** worked well, except I did not know how to fix the nav menu toggle button and it covers a large part of the screen
+- **768px:** no issues
+- **1440px:** no issues
 
-**What is the difference between margin and padding?**
-Margin is the space outside an item's border, while padding is the space between the content and the border of the item.
+## Limitations
 
-**What does a media query do?**
-A media query allows to select CSS styles depending on the screen size or device characteristics.
-
-**Why is `max-width: 100%` useful for images?**
-It makes images responsive because they can shrink to fit smaller screens while maintaining their original proportions through height: auto.
-
-**One CSS behaviour that confused me, and how I understand it now**
-I initially wondered why some navigation links kept a different colour even after I reloaded the page.
-
-I now understand that :visited applies styles to links that the browser recognises as previously visited, no matter if reloaded or not
-
-## Design decisions
-1. chose lighter pastel colours for project card
-2. used gold accent and gold throughout
-3. black background
-
-## Flexbox vs Grid
-nav bar for flexbox= allows for straight line setup and wrapping
-grid for project card = responsive grid and column set up 
-## Responsive behaviour
-On desktop:
-- The navigation links can appear horizontally.
-- The project cards are arranged in columns using CSS Grid.
-- The headings use larger font sizes.
-- The sections have more spacing.
-
-On mobile (600px or below):
-- The body margin is reduced.
-- The main content padding is reduced.
-- The heading font sizes become smaller.
-- The project card padding is reduced.
-- The navigation links change to a vertical layout.
-- Images shrink to fit their containers.
-## Hardest CSS problem
-Initially, I expected an element with width: 100% to fit perfectly inside its parent container. However, when padding and borders were added, the element could become wider than expected.
-
-I understood that this happened because the default box-sizing behaviour is content-box, which adds padding and borders to the specified width.
+The contact form is a demo. It doesn't send an email, and nothing typed into it is stored or logged.
 
 ## AI disclosure
-I used AI to explain nebulous concepts such as variables, the box model, Flexbox, Grid, media queries and focus states, to review my stylesheet, and to help find bugs such as an invalid `var()` value, and a stray character that stopped my section spacing from working. 
-I acknloweged media query to my own breakpoint and values, and I chose not to keep some suggested clean-ups. 
+
+I used AI (Claude) and antigravity to explain DOM and accessibility concepts, to review my code, and to help find the causes of bugs. It also summarised the work I had done, and I used that summary as notes. I wrote my own code and README answers.
