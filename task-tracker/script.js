@@ -9,6 +9,11 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 const taskTitleElement = document.querySelector('.classlist-title');
 
 let tasks = [ ];
+let nextTaskId = 1;
+
+function createTask(name) {
+  return { id: `task-${nextTaskId++}`, name: name, complete: false };
+}
 
 let currentFilter = 'all';
 
