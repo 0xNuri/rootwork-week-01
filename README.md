@@ -44,4 +44,13 @@ The contact form is a demo. It doesn't send an email, and nothing typed into it 
 
 ## AI disclosure
 
-I used AI (Claude) and antigravity to explain DOM and accessibility concepts, to review my code, and to help find the causes of bugs. It also summarised the work I had done, and I used that summary as notes. I wrote my own code and README answers.
+I used AI (Claude) and Antigravity to explain DOM and accessibility concepts, to review my code, and to help find the causes of bugs. Claude also summarised the work I had done, and I used that summary as notes. [Say what Antigravity did, for example "Antigravity suggested code in my editor, which I reviewed before keeping it", or that it wrote nothing in my files.] I wrote my `script.js`, `styles.css` and README answers myself.
+
+### One suggestion I accepted
+My mobile menu covered most of the screen at 375px. Claude told me the `@media (max-width: 600px)` rules were placed above the desktop `nav` rules in `styles.css`, so the desktop rules were overriding them. I accepted that, moved the media query to the end of the file and set `position: relative` on the nav, which fixed it.
+
+### One suggestion I changed or checked
+A reviewer pointed out that my malformed-email branch set `aria-invalid` to `"false"` while an error was showing. Claude explained the rule: an error shown means `"true"`, and a valid field means `"false"`. I changed the malformed branch to `"true"`, but I first put the reset line in the wrong `else`, where it overwrote the value for the whole form. I tested blank, malformed and valid emails in the browser dev tools, found that, and moved the line into the email's own valid branch.
+
+### One suggestion I did not use
+Claude suggested moving the repeated error code into two helper functions. I left it as it is for now.
