@@ -1,0 +1,336 @@
+:root {
+  --background: #0e1326;
+  --text: aliceblue;
+  --accent: goldenrod;
+  --accent-2: white;
+  --accent-3: #808080;
+  --colourtext: rgb(255, 255, 255);
+  --header: gold;
+  --main-spacing: 1rem;
+  --outline: orange;
+  --d4: red;
+  --padding-spacing: 2rem;
+  --glow-gold: rgba(250, 204, 21, 0.15);
+  --glow-indigo: rgba(99, 102, 241, 0.2);
+  --card-1: linear-gradient(135deg, #1e3a8a, #2563eb);
+  --d2: linear-gradient(135deg, #9d174d, #e11d48);
+  --d3: linear-gradient(135deg, #064e3b, #0f766e);
+  --surface: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --input-bg: #808080;
+  --card-text: white;
+}
+
+body.light-theme {
+  --background: #f4f6f8;
+  --text: #1a1a1a;
+  --accent-2: #2d3748;
+  --header: #8a6d00;
+  --accent: #9a6700;
+  --accent-3: #4a5568;
+  --surface: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); 
+  --border: rgba(0, 0, 0, 0.08); 
+}
+header,
+nav,
+footer,
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--main-spacing);
+}
+* {
+  box-sizing: border-box;
+}
+#about img {
+  height: 40px;
+  width: auto;
+}
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  background: linear-gradient(90deg, var(--header), orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+h2 {
+  color: var(--accent);
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+  color: var(--accent-2);
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container h3 {
+  font-size: 1.5rem;
+  color: var(--card-text);
+}
+
+body {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle at top left, var(--glow-gold), transparent 50%),
+    radial-gradient(circle at top right, var(--glow-indigo), transparent 50%);
+  color: var(--text);
+  background-attachment: fixed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1rem;
+}
+.d1 {
+  background: var(--card-1);
+  border: 1px solid var(--outline);
+  border-radius: 0.8rem;
+  padding: var(--padding-spacing);
+}
+.d2 {
+  background: var(--d2);
+  border: 1px solid var(--outline);
+  border-radius: 0.8rem;
+  padding: var(--padding-spacing);
+}
+.d3 {
+  background: var(--d3);
+  border: 1px solid var(--outline);
+  border-radius: 0.8rem;
+  padding: var(--padding-spacing);
+}
+
+section {
+  margin-bottom: var(--padding-spacing);
+  background: var(--surface);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  padding: var(--padding-spacing);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 8px 15px;
+  padding: 1rem;
+
+  justify-content: center;
+  align-content: center;
+}
+
+.error-message {
+  color: var(--d4);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  min-height: 1rem;
+}
+.success-message {
+  color: var(--accent);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#nav-menu {
+  order: 1;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+#theme-toggle {
+  order: 2;
+  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav a {
+  color: var(--accent-2);
+}
+nav a:visited {
+  color: var(--text);
+}
+
+a:hover,
+nav a:hover,
+button:hover {
+  color: var(--accent);
+  background: rgb(255, 255, 255);
+}
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--outline);
+}
+
+input,
+textarea {
+  color: var(--text);
+  background-color: rgba(128, 128, 128, 0.363);
+  border: 1px solid var(--accent);
+  padding: var(--main-spacing);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;}
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill {
+    box-shadow: 0 0 0 1000px var(--input-bg) inset;
+    -webkit-text-fill-color: var(--text);
+    caret-color: var(--text);
+  }
+
+
+label {
+  display: block;
+  margin-bottom: var(--main-spacing);
+}
+
+button {
+  background-color: var(--accent-3);
+  color: var(--background);
+  border: 1px solid var(--outline);
+  padding: var(--main-spacing);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button[type="submit"] {
+  background: linear-gradient(120deg, gold, orange);
+  color: #1a1407;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px -10px rgba(251, 146, 60, 0.8);   /* soft orange glow underneath */
+  transition: transform 0.2s ease;
+}
+
+button[type="reset"] {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  transform: translateY(-2px);
+}
+
+button[type="reset"]:hover {
+  border-color: var(--accent);
+}
+
+nav a {
+  text-decoration: none;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(14, 19, 38, 0.75);
+  top: 0.75rem;
+  border-radius: 999px;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#nav-menu a {
+  display: block;
+  width: auto;
+  border: 2px solid var(--accent-2);
+  background-color: var(--background);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+@media (max-width: 769px) {
+  body {
+    margin: 0.5rem;
+  }
+  nav{
+    position: relative;
+    flex-wrap: wrap;
+  }
+  #nav-menu {
+    display: none;
+    order: 1;
+    border-radius: 1.5rem;
+    flex-basis: 100%;
+  }
+
+  #nav-menu.is-open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-toggle {
+    display: inline-flex;
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--accent-2);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  main {
+    padding: calc(var(--main-spacing) / 2);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .d1,
+  .d2,
+  .d3 {
+    padding: var(--main-spacing);
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+  nav {
+    border-radius: 1.5rem;
+  }
+}
