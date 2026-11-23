@@ -44,7 +44,7 @@ The contact form is a demo. It doesn't send an email, and nothing typed into it 
 
 ## AI disclosure
 
-I used AI (Claude) and Antigravity to explain DOM and accessibility concepts, to review my code, and to help find the causes of bugs. Claude also summarised the work I had done, and I used that summary as notes. [Say what Antigravity did, for example "Antigravity suggested code in my editor, which I reviewed before keeping it", or that it wrote nothing in my files.] I wrote my `script.js`, `styles.css` and README answers myself.
+I used AI (Claude) and Antigravity to explain DOM and accessibility concepts, to review my code, and to help find the causes of bugs. Claude also summarised the work I had done, and I used that summary as notes. Antigravity helped in debugging and fixing code issues until tokens finished, I wrote my `script.js`, `styles.css` and README answers myself.
 
 ### One suggestion I accepted
 My mobile menu covered most of the screen at 375px. Claude told me the `@media (max-width: 600px)` rules were placed above the desktop `nav` rules in `styles.css`, so the desktop rules were overriding them. I accepted that, moved the media query to the end of the file and set `position: relative` on the nav, which fixed it.
